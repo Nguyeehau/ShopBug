@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopBug.Web", "ShopBug.Web\ShopBug.Web.csproj", "{CE5F239C-4D9E-4954-99C7-6054DBDC865F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopBug.Model", "ShopBug.Model\ShopBug.Model.csproj", "{B9B4A72A-BC7D-4CF0-B8A1-B7D23CB59EDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE5F239C-4D9E-4954-99C7-6054DBDC865F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE5F239C-4D9E-4954-99C7-6054DBDC865F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE5F239C-4D9E-4954-99C7-6054DBDC865F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE5F239C-4D9E-4954-99C7-6054DBDC865F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9B4A72A-BC7D-4CF0-B8A1-B7D23CB59EDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9B4A72A-BC7D-4CF0-B8A1-B7D23CB59EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9B4A72A-BC7D-4CF0-B8A1-B7D23CB59EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9B4A72A-BC7D-4CF0-B8A1-B7D23CB59EDF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D9AB0D2-2135-4502-AF59-01E70A69759A}
+	EndGlobalSection
+EndGlobal

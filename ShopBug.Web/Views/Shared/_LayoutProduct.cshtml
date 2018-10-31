@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="breadcrumbs">
+    @RenderSection("breadcrumbs", required: true)
+    
+</div>
+<!--end-breadcrumbs-->
+<!--prdt-starts-->
+<div class="prdt">
+    <div class="container">
+        <div class="prdt-top">
+            <div class="col-md-9 prdt-left">
+                @RenderSection("Leftcontent", required: true)
+              
+            </div>
+            <div class="col-md-3 prdt-right">
+                @RenderSection("rightContent", required: true)
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!--product-end-->
