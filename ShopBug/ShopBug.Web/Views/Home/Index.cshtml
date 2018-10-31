@@ -1,0 +1,132 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var slides = (List<ShopBug.Model.Models.Slide>)ViewBag.Slides;
+    var listSellProduct = (List<ShopBug.Model.Models.Product>)ViewBag.SellProduct;
+}
+
+@section slide{
+    <div id="top" class="callbacks_container">
+        <ul class="rslides" id="slider4">
+
+            @foreach (var item in slides)
+            {
+                <li>
+                    <img src="@item.Image" alt="" />
+                </li>
+            }
+
+
+        </ul>
+    </div>
+    <div class="clearfix"> </div>
+}
+
+<script src="/Assets/client/js/responsiveslides.min.js"></script>
+<script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+        // Slideshow 4
+        $("#slider4").responsiveSlides({
+            auto: true,
+            pager: true,
+            nav: true,
+            speed: 500,
+            namespace: "callbacks",
+            before: function () {
+                $('.events').append("<li>before event fired.</li>");
+            },
+            after: function () {
+                $('.events').append("<li>after event fired.</li>");
+            }
+        });
+
+    });
+</script>
+@section about{
+    <div class="container">
+        <div class="about-top grid-1">
+            <div class="col-md-4 about-left">
+                <figure class="effect-bubba">
+                    <img class="img-responsive" src="/Assets/client/images/kamitos/kamito.jpeg" alt="" />
+                    <figcaption>
+                        <h2>KAMITO ESPADA Blue</h2>
+                        <p>Hãy là người đầu tiên đánh giá sản phẩm này.</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4 about-left">
+                <figure class="effect-bubba">
+                    <img class="img-responsive" src="/Assets/client/images/kamitos/kamito1.jpeg" alt="" />
+                    <figcaption>
+                        <h4>KAMITO ESPADA Yellow</h4>
+                        <p>Hãy là người đầu tiên đánh giá sản phẩm này.</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4 about-left">
+                <figure class="effect-bubba">
+                    <img class="img-responsive" src="/Assets/client/images/kamitos/kamito2.jpeg" alt="" />
+                    <figcaption>
+                        <h4>KAMITO ESPADA Organe</h4>
+                        <p>Hãy là người đầu tiên đánh giá sản phẩm này.</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+}
+
+
+
+<div class="container">
+    <div class="product-top">
+        <div class="product-one">
+
+            @foreach (var item in listSellProduct)
+            {
+                var url = "chi-tiet" + item.MetaTitle + "-" + item.ID;
+                <div class="col-md-3 product-left">
+                    <div class="product-main simpleCart_shelfItem">
+                        <a href="@url" class="mask"><img class="img-responsive zoom-img" src="@item.Image" alt="@item.Name" /></a>
+                        <div class="product-bottom">
+                            <h3>@item.Name</h3>
+                            <p>Explore Now</p>
+                            <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">@(item.Price.HasValue ? item.Price.Value.ToString("N0") : "Liên Hệ")</span></h4>
+                        </div>
+                        <div class="srch">
+                            <span>-50%</span>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+            <div class="clearfix"></div>
+        </div>
+        <div class="product-one">
+
+
+            @foreach (var item in listSellProduct)
+            {
+                var url = "chi-tiet" + item.MetaTitle + "-" + item.ID;
+                <div class="col-md-3 product-left">
+                    <div class="product-main simpleCart_shelfItem">
+                        <a href="@url" class="mask"><img class="img-responsive zoom-img" src="@item.Image" alt="@item.Name" /></a>
+                        <div class="product-bottom">
+                            <h3>@item.Name</h3>
+                            <p>Explore Now</p>
+                            <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$@(item.Price.HasValue ? item.Price.Value.ToString("N0") : "Liên Hệ")</span></h4>
+                        </div>
+                        <div class="srch">
+                            <span>-50%</span>
+                        </div>
+                    </div>
+                </div>
+            }
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
